@@ -9,7 +9,6 @@
   },
   "linter": {
     "enabled": true,
-    "preset": "recommended",
     "rules": {
       "style": { "noNonNullAssertion": "off" }
     }
