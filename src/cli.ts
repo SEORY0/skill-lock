@@ -17,8 +17,7 @@ export async function main(argv: string[]): Promise<number> {
   return 2;
 }
 
-const isDirectRun =
-  process.argv[1] !== undefined && import.meta.url.endsWith("cli.js");
+const isDirectRun = process.argv[1] !== undefined && import.meta.url.endsWith("cli.js");
 if (isDirectRun && process.env.SKILL_LOCK_NO_AUTORUN !== "1") {
   main(process.argv.slice(2)).then((code) => {
     process.exitCode = code;
