@@ -1,4 +1,4 @@
-import { readdirSync } from "node:fs";
+import { type Dirent, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const SKIP_NAMES = new Set([".DS_Store", "Thumbs.db"]);
@@ -10,7 +10,7 @@ const SKIP_NAMES = new Set([".DS_Store", "Thumbs.db"]);
 export function walkFiles(root: string): string[] {
   const results: string[] = [];
   const walk = (dir: string, rel: string): void => {
-    let entries: ReturnType<typeof readdirSync>;
+    let entries: Dirent[];
     try {
       entries = readdirSync(dir, { withFileTypes: true });
     } catch {
