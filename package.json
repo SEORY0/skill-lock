@@ -31,7 +31,7 @@
     "format": "biome format --write .",
     "lint": "biome check .",
     "prepublishOnly": "npm run build",
-    "test": "npm run build && node --test dist/test",
+    "test": "npm run build && node --test",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
