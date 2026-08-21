@@ -1,0 +1,45 @@
+{
+  "name": "skill-lock",
+  "version": "0.1.0",
+  "description": "package-lock.json for AI agent skills — hash-pin skills, agents, hooks, plugins, and MCP config; detect tampering and drift across sessions.",
+  "keywords": [
+    "claude-code",
+    "agent-skills",
+    "security",
+    "supply-chain",
+    "integrity",
+    "lockfile",
+    "mcp"
+  ],
+  "homepage": "https://github.com/SEORY0/skill-lock#readme",
+  "bugs": "https://github.com/SEORY0/skill-lock/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEORY0/skill-lock.git"
+  },
+  "license": "MIT",
+  "author": "SEORY0 <r.sjun3@gmail.com>",
+  "type": "module",
+  "bin": {
+    "skill-lock": "dist/src/cli.js"
+  },
+  "files": [
+    "dist/src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "biome format --write .",
+    "lint": "biome check .",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node --test dist/test/",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
