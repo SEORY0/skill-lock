@@ -1,0 +1,27 @@
+name: Bug report
+description: Something broke or behaved unexpectedly
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Include the command you ran and its full output.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: skill-lock version
+      placeholder: skill-lock --version
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: OS / Node version
+      placeholder: e.g. macOS 15 / Node 22.6
+    validations:
+      required: true

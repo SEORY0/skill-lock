@@ -1,0 +1,27 @@
+name: Harness adapter request
+description: Ask for (or offer to build) support for another agent harness
+labels: [adapter]
+body:
+  - type: input
+    attributes:
+      label: Harness
+      placeholder: e.g. OpenClaw, Codex CLI, opencode
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What does it load?
+      description: >-
+        Where do its skills/instructions, hooks, plugins, and MCP/tool configs
+        live on disk? Paths for user-level and project-level config welcome.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Are you willing to implement it?
+      options:
+        - Yes, with guidance
+        - Yes, independently
+        - No, just requesting
+    validations:
+      required: true
